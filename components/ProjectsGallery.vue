@@ -1,20 +1,9 @@
 <template>
   <section id="projects" class="py-24">
     <div class="section-shell">
-      <SectionTitle eyebrow="Projects" title="Sketchbook of shipped work" />
-      <div class="mb-8 flex flex-wrap gap-3 reveal">
-        <button
-          v-for="tab in tabs"
-          :key="tab"
-          @click="active = tab"
-          class="rounded-full border-2 border-ink px-4 py-2 text-lg transition"
-          :class="active === tab ? 'bg-coral text-ink -rotate-1' : 'bg-paper text-ink hover:bg-sky/45 hover:rotate-1'"
-        >
-          {{ tab }}
-        </button>
-      </div>
+      <SectionTitle eyebrow="Projects" />
       <div class="grid gap-6 lg:grid-cols-3">
-        <AnimatedCard v-for="project in filteredProjects" :key="project.title">
+        <AnimatedCard v-for="project in projects" :key="project.title">
           <button class="w-full text-left" @click="selected = project">
             <div class="overflow-hidden rounded-2xl border-2 border-ink/65">
               <NuxtImg :src="project.image" :alt="project.title" class="h-44 w-full object-cover transition duration-500 hover:scale-105" />
@@ -49,17 +38,10 @@
 </template>
 
 <script setup lang="ts">
-import type { ProjectCategory, ProjectItem } from '~/composables/usePortfolioData'
+import type { ProjectItem } from '~/composables/usePortfolioData'
 
 const { projects } = usePortfolioData()
-const tabs: ProjectCategory[] = ['All', 'Full Stack', 'Frontend', 'Backend']
-const active = ref<ProjectCategory>('All')
 const selected = ref<ProjectItem | null>(null)
-
-const filteredProjects = computed(() => {
-  if (active.value === 'All') return projects
-  return projects.filter(project => project.category === active.value)
-})
 </script>
 
 <style scoped>
