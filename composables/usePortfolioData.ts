@@ -27,15 +27,15 @@ export interface ExperienceItem {
 
 export const usePortfolioData = () => {
   const hero = {
-    name: 'Christine Valdez',
-    role: 'Full Stack Developer',
-    intro: 'I craft robust digital products with cinematic interfaces and deeply reliable engineering foundations.'
+    name: 'Christine Anne Valdez',
+    role: 'Christine Anne Valdez',
+    intro: 'I am a multi-skilled developer who transforms designs and ideas into structured, functional systems and applications.'
   }
 
   const stats = [
     { label: 'Years Experience', value: '7+' },
     { label: 'Projects Completed', value: '45+' },
-    { label: 'Technologies Mastered', value: '20+' }
+    { label: 'Happy Clients', value: '30+' }
   ]
 
   const skills: SkillItem[] = [
@@ -54,7 +54,7 @@ export const usePortfolioData = () => {
     {
       title: 'Atlas Commerce Suite',
       category: 'Full Stack',
-      description: 'Enterprise storefront with real-time inventory and performance-focused checkout.',
+      description: 'Enterprise storefront with real-time inventory and fast checkout flows wrapped in an expressive UI.',
       stack: ['Nuxt', 'Laravel', 'PostgreSQL'],
       image: 'https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=1200&q=80',
       github: '#',
@@ -63,7 +63,7 @@ export const usePortfolioData = () => {
     {
       title: 'Lumen Analytics',
       category: 'Frontend',
-      description: 'Data-rich dashboard with smooth chart rendering and executive-grade visual storytelling.',
+      description: 'Insight dashboard with smooth chart interactions and storytelling-style reporting cards.',
       stack: ['Vue', 'TypeScript', 'Tailwind'],
       image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
       github: '#',
@@ -72,7 +72,7 @@ export const usePortfolioData = () => {
     {
       title: 'Forge API Platform',
       category: 'Backend',
-      description: 'Scalable API service with clean architecture, robust auth, and observability built in.',
+      description: 'Scalable service layer with structured auth, observability, and developer-friendly documentation.',
       stack: ['Laravel', 'Docker', 'PostgreSQL'],
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
       github: '#',
@@ -85,21 +85,21 @@ export const usePortfolioData = () => {
       year: '2025',
       company: 'Northwind Labs',
       role: 'Senior Full Stack Developer',
-      description: 'Led architecture for customer-facing SaaS platform and mentored cross-functional engineers.',
+      description: 'Led architecture for a customer SaaS platform and guided engineers through feature delivery from concept to production.',
       tech: ['Nuxt', 'Laravel', 'AWS']
     },
     {
       year: '2022',
       company: 'Pixel Foundry',
       role: 'Full Stack Engineer',
-      description: 'Built high-traffic web products focused on UI precision and backend resilience.',
+      description: 'Built high-traffic products with polished frontend flows and resilient backend infrastructure.',
       tech: ['Vue', 'PHP', 'PostgreSQL']
     },
     {
       year: '2019',
       company: 'Codefront Studio',
       role: 'Frontend Developer',
-      description: 'Delivered premium interactive interfaces for product launches and brand platforms.',
+      description: 'Delivered launch websites and branded product pages with strong interaction design and accessibility.',
       tech: ['Vue', 'Tailwind', 'Figma']
     }
   ]

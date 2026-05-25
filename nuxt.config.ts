@@ -7,10 +7,10 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'Aurelius Dev Portfolio',
+      title: 'Christine Anne Valdez',
       meta: [
-        { name: 'description', content: 'Premium full stack developer portfolio built with Nuxt 3, TypeScript, and TailwindCSS.' },
-        { name: 'theme-color', content: '#1e1f26' }
+        { name: 'description', content: 'Hand-drawn inspired full stack developer portfolio built with Nuxt 3 and TailwindCSS.' },
+        { name: 'theme-color', content: '#fff8e7' }
       ]
     }
   },

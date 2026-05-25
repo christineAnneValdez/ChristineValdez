@@ -10,21 +10,19 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        canvas: '#1e1f26',
-        panel: '#25262e',
-        gold: '#d4a64f',
-        mist: '#b0b0b0'
+        paper: '#fffaf0',
+        ink: '#29211a',
+        coral: '#ff8566',
+        sky: '#70c7fc',
+        mint: '#88dc9b',
+        mustard: '#ffd166'
       },
       boxShadow: {
-        glow: '0 0 32px rgba(212,166,79,0.18)',
-        soft: '0 10px 30px rgba(0,0,0,0.35)'
+        doodle: '0 10px 0 rgba(41, 33, 26, 0.18), 0 20px 34px rgba(41, 33, 26, 0.14)'
       },
       fontFamily: {
-        heading: ['"Cormorant Garamond"', 'serif'],
-        body: ['"Manrope"', 'sans-serif']
-      },
-      backgroundImage: {
-        'gold-gradient': 'linear-gradient(120deg, rgba(212,166,79,0.2), rgba(212,166,79,0.03))'
+        heading: ['"Fredoka"', 'cursive'],
+        body: ['"Patrick Hand"', 'cursive']
       }
     }
   }

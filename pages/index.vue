@@ -11,8 +11,8 @@
       <ExperienceTimeline />
       <ContactForm />
     </main>
-    <footer class="border-t border-gold/20 py-8 text-center text-sm text-mist">
-      © {{ year }} Christine Valdez. Crafted with Nuxt 3.
+    <footer class="border-t-2 border-ink/55 py-8 text-center text-lg text-ink/80 bg-paper/70">
+      ï¿½ {{ year }} Christine Anne Valdez
     </footer>
   </div>
 </template>

@@ -1,23 +1,23 @@
 <template>
-  <section id="home" class="relative min-h-screen flex items-center pt-24 pb-16">
+  <section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+    <span class="sketch-dot h-10 w-10 left-[8%] top-[18%] bg-coral/25" />
+    <span class="sketch-dot h-16 w-16 right-[12%] top-[26%] bg-sky/30" style="animation-delay: 0.8s" />
+    <span class="sketch-dot h-12 w-12 left-[18%] bottom-[14%] bg-mint/30" style="animation-delay: 1.7s" />
     <div class="section-shell grid gap-12 lg:grid-cols-2 items-center">
       <div class="reveal">
-        <p class="text-gold tracking-[0.25em] uppercase text-sm">Hi, I&apos;m {{ hero.name }}</p>
-        <h1 class="font-heading text-5xl md:text-7xl mt-4 leading-tight">{{ hero.role }}</h1>
-        <p class="text-mist max-w-xl mt-6 text-lg">{{ hero.intro }}</p>
+        <p class="text-ink text-lg md:text-xl uppercase tracking-[0.18em]">
+          Hey there, I am
+        </p>
+        <h1 class="font-heading text-5xl md:text-7xl mt-5 leading-tight text-ink">{{ hero.role }}</h1>
+        <p class="max-w-xl mt-6 text-2xl text-ink/90">{{ hero.intro }}</p>
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href="#contact" class="rounded-full border border-gold bg-gold px-6 py-3 text-canvas font-semibold shadow-glow transition hover:opacity-90">Contact Me</a>
-          <a href="#projects" class="rounded-full border border-gold/70 px-6 py-3 text-gold transition hover:bg-gold/10">View Projects</a>
+          <a href="#contact" class="rounded-full border-2 border-ink bg-coral px-6 py-3 text-ink font-semibold transition hover:-rotate-1">Contact Me</a>
+          <a href="#projects" class="rounded-full border-2 border-ink bg-sky/55 px-6 py-3 text-ink transition hover:rotate-1">View Projects</a>
         </div>
       </div>
       <div class="relative reveal">
-        <div class="absolute -inset-6 rounded-[2rem] bg-gold-gradient blur-2xl" />
-        <NuxtImg src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1100&q=80" alt="Profile portrait placeholder" class="relative h-[520px] w-full rounded-[2rem] object-cover border border-gold/35 shadow-glow" />
-        <div class="absolute right-[-44px] top-1/2 hidden -translate-y-1/2 md:flex flex-col gap-4">
-          <a href="#" class="text-gold/70 hover:text-gold transition">GH</a>
-          <a href="#" class="text-gold/70 hover:text-gold transition">LI</a>
-          <a href="#" class="text-gold/70 hover:text-gold transition">X</a>
-        </div>
+        <div class="absolute -inset-4 rounded-[2rem] border-2 border-ink/65 border-dashed -rotate-2" />
+        <NuxtImg src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1100&q=80" alt="Profile portrait placeholder" class="relative h-[520px] w-full rounded-[2rem] object-cover border-2 border-ink shadow-doodle rotate-[1.4deg]" />
       </div>
     </div>
   </section>

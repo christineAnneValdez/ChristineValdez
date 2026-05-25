@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Fredoka:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -13,11 +13,24 @@ html {
 }
 
 body {
-  @apply bg-canvas text-white font-body antialiased;
+  @apply text-slate-800 font-body antialiased;
+  background-color: #fff8e7;
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(212,166,79,0.12), transparent 35%),
-    radial-gradient(circle at 80% 10%, rgba(212,166,79,0.08), transparent 25%),
-    linear-gradient(180deg, #1e1f26 0%, #181920 100%);
+    radial-gradient(circle at 18% 12%, rgba(255, 146, 97, 0.24), transparent 28%),
+    radial-gradient(circle at 88% 16%, rgba(112, 199, 252, 0.22), transparent 30%),
+    radial-gradient(circle at 25% 78%, rgba(136, 220, 155, 0.2), transparent 32%),
+    linear-gradient(180deg, #fff8e7 0%, #fff1d6 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.24;
+  background-image: radial-gradient(rgba(35, 32, 28, 0.45) 0.7px, transparent 0.7px);
+  background-size: 8px 8px;
+  z-index: -1;
 }
 
 .section-shell {
@@ -25,26 +38,77 @@ body {
 }
 
 .glass-card {
-  @apply rounded-2xl border border-[rgba(212,166,79,0.3)] bg-[rgba(37,38,46,0.7)] backdrop-blur-sm shadow-soft;
+  @apply rounded-[1.6rem] border-2 border-ink/75 bg-paper px-6 py-6 shadow-doodle;
+  position: relative;
+  transform: rotate(var(--card-tilt, 0deg));
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: -7px;
+  border: 2px dashed rgba(41, 33, 26, 0.4);
+  border-radius: 1.8rem;
+  transform: rotate(-1.2deg);
+  pointer-events: none;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 800ms ease, transform 800ms ease;
+  transform: translateY(24px) scale(0.98);
+  transition: opacity 700ms ease, transform 700ms ease;
 }
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+}
+
+.sketch-dot {
+  position: absolute;
+  border-radius: 9999px;
+  border: 2px solid rgba(41, 33, 26, 0.65);
+  animation: bob 5s ease-in-out infinite;
+}
+
+.squiggle {
+  position: relative;
+}
+
+.squiggle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 6px,
+    rgba(41, 33, 26, 0.75) 6px,
+    rgba(41, 33, 26, 0.75) 9px
+  );
+  clip-path: polygon(0 65%, 4% 35%, 8% 68%, 12% 40%, 16% 70%, 20% 38%, 24% 72%, 28% 42%, 32% 70%, 36% 38%, 40% 66%, 44% 34%, 48% 68%, 52% 39%, 56% 70%, 60% 40%, 64% 67%, 68% 36%, 72% 70%, 76% 39%, 80% 68%, 84% 35%, 88% 69%, 92% 41%, 96% 66%, 100% 37%);
 }
 
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 280ms ease;
+  transition: opacity 260ms ease;
 }
 
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(4deg);
+  }
 }
