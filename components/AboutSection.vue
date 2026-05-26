@@ -11,11 +11,16 @@ transforming designs and ideas into structured, functional systems and applicati
 learn new technologies and adapt to unfamiliar projects focused on innovation. Strongly focused on creativity,
 organization, communication, security, problem-solving, and delivering high-quality results for clients and teams.</p>
         </div>
-        <div class="grid self-start gap-4 sm:grid-cols-3">
-          <AnimatedCard v-for="stat in stats" :key="stat.label">
-            <p class="font-heading text-4xl text-ink">{{ stat.value }}</p>
-            <p class="text-lg text-ink/80 mt-2">{{ stat.label }}</p>
-          </AnimatedCard>
+        <div class="self-start">
+          <div class="grid gap-4 sm:grid-cols-3">
+            <AnimatedCard v-for="stat in stats" :key="stat.label">
+              <p class="font-heading text-4xl text-ink">{{ stat.value }}</p>
+              <p class="text-lg text-ink/80 mt-2">{{ stat.label }}</p>
+            </AnimatedCard>
+          </div>
+          <div class="mt-6 overflow-hidden rounded-[1.6rem] border-2 border-ink/70 bg-paper shadow-doodle reveal">
+            <NuxtImg src="/images/covver 2.jpg" alt="About cover image" class="h-52 w-full object-cover md:h-64" />
+          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <section id="contact" class="py-24">
     <div class="section-shell">
-      <SectionTitle eyebrow="Contact" title="Let us doodle your next big idea" />
+      <SectionTitle eyebrow="Contact" />
       <div class="grid gap-8 lg:grid-cols-2">
         <AnimatedCard>
           <form class="space-y-4">

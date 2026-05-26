@@ -17,7 +17,7 @@
       </div>
       <div class="relative reveal">
         <div class="absolute -inset-4 rounded-[2rem] border-2 border-ink/65 border-dashed -rotate-2" />
-        <NuxtImg src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1100&q=80" alt="Profile portrait placeholder" class="relative h-[520px] w-full rounded-[2rem] object-cover border-2 border-ink shadow-doodle rotate-[1.4deg]" />
+        <NuxtImg src="/images/cover 1.jpg" alt="Profile portrait" class="relative h-[520px] w-full rounded-[2rem] object-cover border-2 border-ink shadow-doodle rotate-[1.4deg]" />
       </div>
     </div>
   </section>
