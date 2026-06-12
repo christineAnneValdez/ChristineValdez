@@ -17,11 +17,14 @@
           <h1 class="mb-2 text-3xl md:text-5xl font-black tracking-tight text-ink">{{ project.title }}</h1>
           <p class="mb-6 text-sm font-bold uppercase tracking-[0.18em] text-ink/70">{{ project.category }}</p>
 
-          <NuxtImg
-            :src="project.image"
-            :alt="project.title"
-            class="mb-8 w-full h-auto rounded-2xl border-2 border-ink/65 object-contain"
-          />
+          <div class="mb-8 w-full max-w-5xl mx-auto aspect-[16/9] rounded-2xl border-2 border-ink/65 overflow-hidden bg-paper">
+            <NuxtImg
+              :src="project.image"
+              :alt="project.title"
+              class="h-full w-full"
+              :class="project.imageFit === 'cover' ? 'object-cover' : 'object-contain'"
+            />
+          </div>
 
           <div v-if="projectLinks.length" class="mb-8 flex flex-wrap gap-3">
             <a
@@ -67,7 +70,7 @@
                 :key="`${project.slug}-gallery-${index}`"
                 :src="photo"
                 :alt="`${project.title} gallery image ${index + 1}`"
-                class="h-52 w-full rounded-2xl border-2 border-ink/65 object-cover"
+                class="h-52 w-full rounded-2xl border-2 border-ink/65 bg-paper object-contain"
               />
             </div>
           </section>

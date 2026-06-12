@@ -14,7 +14,8 @@
               <NuxtImg
                 :src="project.image"
                 :alt="project.title"
-                class="h-44 md:h-52 lg:h-60 w-full object-cover transition duration-500 hover:scale-105"
+                class="h-44 md:h-52 lg:h-60 w-full bg-paper transition duration-500 hover:scale-105"
+                :class="project.imageFit === 'cover' ? 'object-cover' : 'object-contain'"
               />
             </div>
           </NuxtLink>
