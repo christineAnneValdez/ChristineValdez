@@ -1,8 +1,5 @@
 <template>
   <section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
-    <span class="sketch-dot h-10 w-10 left-[8%] top-[18%] bg-coral/25" />
-    <span class="sketch-dot h-16 w-16 right-[12%] top-[26%] bg-sky/30" style="animation-delay: 0.8s" />
-    <span class="sketch-dot h-12 w-12 left-[18%] bottom-[14%] bg-mint/30" style="animation-delay: 1.7s" />
     <div class="section-shell grid gap-12 lg:grid-cols-2 items-center">
       <div class="reveal">
         <p class="text-ink text-lg md:text-xl uppercase tracking-[0.18em]">

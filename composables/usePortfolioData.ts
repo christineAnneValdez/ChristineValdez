@@ -15,17 +15,23 @@ export interface ProjectItem {
   highlights?: string[]
   stack: string[]
   image: string
+  imageFit?: 'contain' | 'cover'
   github?: string
   demo?: string
   gallery?: string[]
 }
 
 export interface ExperienceItem {
-  year: string
-  company: string
   role: string
-  description: string
-  tech: string[]
+  company: string
+  period: string
+  highlights: string[]
+}
+
+export interface AboutContent {
+  paragraphs: string[]
+  imageSrc: string
+  imageAlt: string
 }
 
 export const usePortfolioData = () => {
@@ -35,10 +41,17 @@ export const usePortfolioData = () => {
     intro: 'I am a multi-skilled developer who transforms designs and ideas into structured, functional systems and applications.'
   }
 
+  const about: AboutContent = {
+    paragraphs: [
+      'A dedicated Full Stack Developer with experience in web development, maintenance, technical documentation, deployment, debugging, troubleshooting, virtual assistance, and AI-assisted tools and workflows. Skilled in transforming designs and ideas into structured, functional systems and applications.',
+      'Enthusiastic and eager to learn new technologies and adapt to unfamiliar projects focused on innovation. Strongly focused on creativity, organization, communication, security, problem-solving, and delivering high-quality results for clients and teams.'
+    ],
+    imageSrc: '/images/covver 2.jpg',
+    imageAlt: 'About cover image'
+  }
+
   const stats = [
-    { label: 'Years Experience', value: '7+' },
-    { label: 'Projects Completed', value: '45+' },
-    { label: 'Happy Clients', value: '30+' }
+    { label: 'Projects Completed', value: '45+' }
   ]
 
   const skills: SkillItem[] = [
@@ -97,7 +110,8 @@ export const usePortfolioData = () => {
         'It supports generating reports from stored programs, projects, studies, presentations, and more.'
       ],
       stack: ['Laravel', 'Vite', 'MySQL'],
-      image: '/images/projects/radiis/radiis_cover.jpg',
+      image: '/images/projects/radiis/radiis_cover.png',
+      imageFit: 'cover',
       gallery: [
         '/images/projects/radiis/radiis_dashboard.jpg',
         '/images/projects/radiis/radiis_view.jpg',
@@ -107,45 +121,96 @@ export const usePortfolioData = () => {
       ]
     },
     {
-      slug: 'forge-api-platform',
-      title: 'Forge API Platform',
-      category: 'Backend',
-      description: 'Scalable service layer with structured auth, observability, and developer-friendly documentation.',
-      stack: ['Laravel', 'Docker', 'PostgreSQL'],
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
+      slug: 'kanban-task-management-system',
+      title: 'Kanban Task Management System',
+      category: 'Full Stack',
+      description: 'A web-based Kanban task management system designed to organize projects and monitor workflow.',
+      highlights: [
+        'Developed a web-based Kanban task management system to organize projects and monitor workflow.',
+        'Built features for task creation, assignment, status tracking, and board management.',
+        'Improved team collaboration through an intuitive drag-and-drop interface and organized project tracking.'
+      ],
+      stack: ['Laravel', 'MySQL', 'Nuxt'],
+      image: '/images/projects/kanban/kanban-dashboard.png',
       gallery: [
-        'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=1200&q=80'
+        '/images/projects/kanban/kanban-dashboard.png',
+        '/images/projects/kanban/kanban-board.png',
+        '/images/projects/kanban/kanban-task.png'
+      ]
+    },
+    {
+      slug: 'chargecircle-landing-page',
+      title: 'ChargeCircle Landing Page (Charging Fleet Operation Company)',
+      category: 'Frontend',
+      description: 'A responsive and modern landing page for a charging fleet operations company that showcases services and brand identity.',
+      highlights: [
+        'Developed a responsive and modern landing page for a charging fleet operations company to showcase services and brand identity.',
+        'Designed and implemented the user interface to ensure a clean layout, smooth navigation, and mobile-friendly experience.',
+        'Structured content sections for company overview, services, and call-to-action to improve user engagement and conversion.'
+      ],
+      stack: ['Nuxt', 'Vue'],
+      image: '/images/projects/CC-website/cc-cover.png',
+      gallery: [
+        '/images/projects/CC-website/cc-cover.png',
+        '/images/projects/CC-website/cc-services.png',
+        '/images/projects/CC-website/cc-services2.png',
+        '/images/projects/CC-website/cc-contacts.png'
       ]
     }
   ]
 
   const experiences: ExperienceItem[] = [
     {
-      year: '2025',
-      company: 'Northwind Labs',
-      role: 'Senior Full Stack Developer',
-      description: 'Led architecture for a customer SaaS platform and guided engineers through feature delivery from concept to production.',
-      tech: ['Nuxt', 'Laravel', 'AWS']
+      role: 'Full Stack Developer',
+      company: 'MCT Netwerke | Mannheim, Baden-Wurttemberg, Germany',
+      period: 'Oct 2025 - May 2026',
+      highlights: [
+        'Developed and maintained a Kanban Board System and an open-source video conferencing platform with individual voice recording functionality.',
+        'Created landing pages and contributed to the ongoing development of a Task Management System with one-click task features.',
+        'Developed the landing page for a charging fleet company and contributed to the ongoing development of its application system.',
+        'Contributed to the development and enhancement of an event and ticketing system with payment integration using Stripe and PayPal.',
+        'Managed deployment processes and performed system maintenance to ensure stability, performance, and continuous availability of applications.'
+      ]
     },
     {
-      year: '2022',
-      company: 'Pixel Foundry',
-      role: 'Full Stack Engineer',
-      description: 'Built high-traffic products with polished frontend flows and resilient backend infrastructure.',
-      tech: ['Vue', 'PHP', 'PostgreSQL']
+      role: 'Technical Support Staff',
+      company: 'University Extension Program Office | Central Luzon State University',
+      period: 'Jul 2025 - Aug 2025',
+      highlights: [
+        'Created and organized Excel reports, encoded training survey data, and maintained accurate records.',
+        'Assisted with administrative tasks, document preparation, and daily office operations in the Community Development Division.'
+      ]
     },
     {
-      year: '2019',
-      company: 'Codefront Studio',
-      role: 'Frontend Developer',
-      description: 'Delivered launch websites and branded product pages with strong interaction design and accessibility.',
-      tech: ['Vue', 'Tailwind', 'Figma']
+      role: 'Social Media Manager',
+      company: 'Link: heightmax.ai',
+      period: 'May 2025 - Jul 2025',
+      highlights: [
+        'Managed Instagram and TikTok accounts, using AI to generate images and content related to height videos and to market their website, HeightMax AI.',
+        'Posted regularly to increase viewers and user engagement.'
+      ]
+    },
+    {
+      role: 'Full-Stack Developer Intern',
+      company: 'Management Information System office | Central Luzon State University',
+      period: 'Feb 2025 - May 2025',
+      highlights: [
+        'Contributed to the ongoing development and maintenance of RADIIS (Research and Development, Innovation, and Information Systems) and BASIS (Business Affairs Information System).',
+        'Assisted in developing, testing, debugging, and improving system features and functionalities for internal university operations.'
+      ]
+    },
+    {
+      role: 'Instagram Content Research Assistant',
+      company: 'Mindset | Wealth | Growth | Success (@opusera)',
+      period: 'Feb 2025 - May 2025',
+      highlights: [
+        'Researched trending topics, viral clips, and popular influencers related to wealth, motivation, personal growth, and success.',
+        'Curated and sourced engaging content for daily Instagram posts and reels while monitoring current social media trends.'
+      ]
     }
   ]
 
   const getProjectBySlug = (slug: string) => projects.find(project => project.slug === slug)
 
-  return { hero, stats, skills, projects, experiences, getProjectBySlug }
+  return { hero, about, stats, skills, projects, experiences, getProjectBySlug }
 }
