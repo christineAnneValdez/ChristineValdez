@@ -15,11 +15,6 @@ html {
 body {
   @apply text-slate-800 font-body antialiased;
   background-color: #fff8e7;
-  background-image:
-    radial-gradient(circle at 18% 12%, rgba(255, 146, 97, 0.24), transparent 28%),
-    radial-gradient(circle at 88% 16%, rgba(112, 199, 252, 0.22), transparent 30%),
-    radial-gradient(circle at 25% 78%, rgba(136, 220, 155, 0.2), transparent 32%),
-    linear-gradient(180deg, #fff8e7 0%, #fff1d6 100%);
 }
 
 body::before {
@@ -64,13 +59,6 @@ body::before {
   transform: translateY(0) scale(1);
 }
 
-.sketch-dot {
-  position: absolute;
-  border-radius: 9999px;
-  border: 2px solid rgba(41, 33, 26, 0.65);
-  animation: bob 5s ease-in-out infinite;
-}
-
 .squiggle {
   position: relative;
 }
@@ -100,15 +88,4 @@ body::before {
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-}
-
-@keyframes bob {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-7px) rotate(4deg);
-  }
 }
