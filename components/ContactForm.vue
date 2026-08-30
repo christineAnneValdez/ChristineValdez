@@ -13,13 +13,44 @@
         </AnimatedCard>
         <AnimatedCard>
           <p class="text-2xl text-ink/80">Available for freelance, contract, and full-time engineering partnerships.</p>
-          <div class="mt-5 space-y-3 text-xl text-ink">
-            <p><span class="font-heading">Email:</span> hello@portfolio.dev</p>
-            <p><span class="font-heading">GitHub:</span> github.com/username</p>
-            <p><span class="font-heading">LinkedIn:</span> linkedin.com/in/username</p>
+          <div class="mt-5 flex flex-wrap gap-4 text-xl text-ink">
+            <a
+              v-for="contact in contacts"
+              :key="contact.label"
+              :href="contact.href"
+              :aria-label="contact.label"
+              class="group inline-flex transition hover:-translate-y-1 hover:-rotate-3"
+            >
+              <span class="grid h-11 w-11 place-content-center rounded-full border-2 border-ink bg-paper transition group-hover:bg-coral group-hover:shadow-doodle">
+                <img :src="contact.icon" :alt="contact.label" class="h-6 w-6 transition group-hover:scale-110" loading="lazy">
+              </span>
+            </a>
           </div>
         </AnimatedCard>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const contacts = [
+  {
+    label: 'Email',
+    value: 'hello@portfolio.dev',
+    href: 'mailto:hello@portfolio.dev',
+    icon: 'https://api.iconify.design/mdi:email-outline.svg'
+  },
+  {
+    label: 'GitHub',
+    value: 'github.com/username',
+    href: 'https://github.com/username',
+    icon: 'https://api.iconify.design/mdi:github.svg'
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/username',
+    href: 'https://linkedin.com/in/username',
+    icon: 'https://api.iconify.design/mdi:linkedin.svg'
+  }
+]
+</script>
