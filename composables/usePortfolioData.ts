@@ -34,6 +34,13 @@ export interface AboutContent {
   imageAlt: string
 }
 
+export interface ContactItem {
+  label: string
+  value: string
+  href: string
+  icon: string
+}
+
 export const usePortfolioData = () => {
   const hero = {
     name: 'Christine Anne Valdez',
@@ -52,6 +59,27 @@ export const usePortfolioData = () => {
 
   const stats = [
     { label: 'Projects Completed', value: '45+' }
+  ]
+
+  const contacts: ContactItem[] = [
+    {
+      label: 'Email',
+      value: 'christineannevaldez2@gmail.com',
+      href: 'mailto:christineannevaldez2@gmail.com',
+      icon: 'https://api.iconify.design/mdi:email-outline.svg'
+    },
+    {
+      label: 'GitHub',
+      value: 'github.com/username',
+      href: 'https://github.com/christineAnneValdez',
+      icon: 'https://api.iconify.design/mdi:github.svg'
+    },
+    {
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/username',
+      href: 'https://www.linkedin.com/in/christineannevaldez',
+      icon: 'https://api.iconify.design/mdi:linkedin.svg'
+    }
   ]
 
   const skills: SkillItem[] = [
@@ -237,5 +265,5 @@ export const usePortfolioData = () => {
 
   const getProjectBySlug = (slug: string) => projects.find(project => project.slug === slug)
 
-  return { hero, about, stats, skills, projects, experiences, getProjectBySlug }
+  return { hero, about, stats, contacts, skills, projects, experiences, getProjectBySlug }
 }

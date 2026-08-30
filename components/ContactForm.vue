@@ -33,24 +33,5 @@
 </template>
 
 <script setup lang="ts">
-const contacts = [
-  {
-    label: 'Email',
-    value: 'hello@portfolio.dev',
-    href: 'mailto:hello@portfolio.dev',
-    icon: 'https://api.iconify.design/mdi:email-outline.svg'
-  },
-  {
-    label: 'GitHub',
-    value: 'github.com/username',
-    href: 'https://github.com/username',
-    icon: 'https://api.iconify.design/mdi:github.svg'
-  },
-  {
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/username',
-    href: 'https://linkedin.com/in/username',
-    icon: 'https://api.iconify.design/mdi:linkedin.svg'
-  }
-]
+const { contacts } = usePortfolioData()
 </script>
