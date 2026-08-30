@@ -10,7 +10,7 @@
           :class="placementClasses[index % placementClasses.length]"
         >
           <NuxtLink :to="`/projects/${project.slug}`" class="block focus:outline-none">
-            <div class="overflow-hidden rounded-2xl border-2 border-ink/65">
+            <div class="overflow-hidden sketch-photo">
               <NuxtImg
                 :src="project.image"
                 :alt="project.title"

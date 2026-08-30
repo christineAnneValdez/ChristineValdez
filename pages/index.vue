@@ -11,8 +11,8 @@
       <ExperienceTimeline />
       <ContactForm />
     </main>
-    <footer class="border-t-2 border-ink/55 py-8 text-center text-lg text-ink/80 bg-paper/70">
-      � {{ year }} Christine Anne Valdez
+    <footer class="border-t-2 border-ink/55 bg-paper/80 py-8 text-center text-lg text-ink/80">
+      Copyright {{ year }} Christine Anne Valdez
     </footer>
   </div>
 </template>

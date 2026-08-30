@@ -5,7 +5,7 @@
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 reveal">
         <AnimatedCard v-for="skill in skillsWithGroup" :key="skill.name">
           <div class="flex items-center gap-4">
-            <div class="h-12 w-12 rounded-2xl border-2 border-ink bg-paper grid place-content-center p-2">
+            <div class="h-12 w-12 border-2 border-ink bg-sage/25 grid place-content-center p-2 sketch-photo">
               <img :src="skill.icon" :alt="`${skill.name} icon`" class="h-7 w-7 object-contain" loading="lazy">
             </div>
             <div>

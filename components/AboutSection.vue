@@ -19,7 +19,7 @@
               <p class="text-lg text-ink/80 mt-2">{{ stat.label }}</p>
             </AnimatedCard>
           </div>
-          <div class="mt-6 overflow-hidden rounded-[1.6rem] border-2 border-ink/70 bg-paper shadow-doodle reveal">
+          <div class="mt-6 overflow-hidden sketch-photo reveal">
             <NuxtImg :src="about.imageSrc" :alt="about.imageAlt" class="h-52 w-full object-cover md:h-64" />
           </div>
         </div>

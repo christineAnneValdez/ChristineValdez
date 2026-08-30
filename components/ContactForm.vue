@@ -5,10 +5,10 @@
       <div class="grid gap-8 lg:grid-cols-2">
         <AnimatedCard>
           <form class="space-y-4">
-            <input type="text" placeholder="Name" class="w-full rounded-2xl border-2 border-ink/70 bg-paper p-3 text-lg text-ink outline-none focus:bg-mustard/25" />
-            <input type="email" placeholder="Email" class="w-full rounded-2xl border-2 border-ink/70 bg-paper p-3 text-lg text-ink outline-none focus:bg-mustard/25" />
-            <textarea rows="5" placeholder="Message" class="w-full rounded-2xl border-2 border-ink/70 bg-paper p-3 text-lg text-ink outline-none focus:bg-mustard/25" />
-            <button type="button" class="rounded-full border-2 border-ink bg-coral px-6 py-3 text-lg font-semibold text-ink hover:-rotate-1 transition">Send Message</button>
+            <input type="text" placeholder="Name" class="w-full border-2 border-ink/70 bg-paper p-3 text-lg text-ink outline-none focus:bg-ochre/20" />
+            <input type="email" placeholder="Email" class="w-full border-2 border-ink/70 bg-paper p-3 text-lg text-ink outline-none focus:bg-ochre/20" />
+            <textarea rows="5" placeholder="Message" class="w-full border-2 border-ink/70 bg-paper p-3 text-lg text-ink outline-none focus:bg-ochre/20" />
+            <button type="button" class="urban-button bg-brick/75 text-lg">Send Message</button>
           </form>
         </AnimatedCard>
         <AnimatedCard>

@@ -9,8 +9,8 @@ export default defineNuxtConfig({
     head: {
       title: 'Christine Anne Valdez',
       meta: [
-        { name: 'description', content: 'Hand-drawn inspired full stack developer portfolio built with Nuxt 3 and TailwindCSS.' },
-        { name: 'theme-color', content: '#fff8e7' }
+        { name: 'description', content: 'Urban sketch inspired full stack developer portfolio built with Nuxt 3 and TailwindCSS.' },
+        { name: 'theme-color', content: '#f7f0df' }
       ]
     }
   },

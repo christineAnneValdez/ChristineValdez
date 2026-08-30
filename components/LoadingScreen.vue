@@ -1,9 +1,9 @@
 <template>
   <transition name="fade">
-    <div v-if="show" class="fixed inset-0 z-[100] grid place-content-center bg-[#fff8e7]">
+    <div v-if="show" class="fixed inset-0 z-[100] grid place-content-center bg-paper watercolor-wash">
       <div class="text-center">
         <p class="font-heading text-6xl text-ink -rotate-2">CV</p>
-        <p class="mt-3 text-xl text-ink/75">Sketching the portfolio...</p>
+        <p class="mt-3 text-xl text-ink/75">Inking the city lines...</p>
       </div>
     </div>
   </transition>

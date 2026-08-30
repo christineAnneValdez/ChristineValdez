@@ -3,7 +3,7 @@
     <div class="section-shell">
       <SectionTitle eyebrow="Experience" />
       <div class="relative pl-8 space-y-8">
-        <div class="absolute left-1 top-0 h-full w-1 rounded-full bg-ink/60" />
+        <div class="absolute left-1 top-0 h-full w-1 bg-ink/60" />
         <AnimatedCard v-for="item in experiences" :key="`${item.role}-${item.period}`">
           <p class="text-ink text-sm tracking-[0.18em] uppercase">{{ item.period }}</p>
           <h3 class="mt-2 text-3xl font-heading text-ink">{{ item.role }}</h3>

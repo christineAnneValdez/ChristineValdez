@@ -10,18 +10,19 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        paper: '#fffaf0',
-        ink: '#29211a',
-        coral: '#ff8566',
-        sky: '#70c7fc',
-        mint: '#88dc9b',
-        mustard: '#ffd166'
+        paper: '#f7f0df',
+        ink: '#221f1a',
+        graphite: '#5f615b',
+        brick: '#b9654f',
+        skywash: '#9bb7c7',
+        sage: '#899779',
+        ochre: '#d8a449'
       },
       boxShadow: {
-        doodle: '0 10px 0 rgba(41, 33, 26, 0.18), 0 20px 34px rgba(41, 33, 26, 0.14)'
+        sketch: '8px 10px 0 rgba(34, 31, 26, 0.14), 0 22px 46px rgba(34, 31, 26, 0.12)'
       },
       fontFamily: {
-        heading: ['"Fredoka"', 'cursive'],
+        heading: ['"Architects Daughter"', 'cursive'],
         body: ['"Patrick Hand"', 'cursive']
       }
     }

@@ -7,7 +7,7 @@
         <div class="mb-8">
           <NuxtLink
             to="/#projects"
-            class="inline-flex items-center rounded-full border-2 border-ink/60 px-4 py-2 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-ink hover:text-paper"
+            class="urban-button bg-paper px-4 py-2 text-sm"
           >
             Back to projects
           </NuxtLink>
@@ -17,7 +17,7 @@
           <h1 class="mb-2 text-3xl md:text-5xl font-black tracking-tight text-ink">{{ project.title }}</h1>
           <p class="mb-6 text-sm font-bold uppercase tracking-[0.18em] text-ink/70">{{ project.category }}</p>
 
-          <div class="mb-8 w-full max-w-5xl mx-auto aspect-[16/9] rounded-2xl border-2 border-ink/65 overflow-hidden bg-paper">
+          <div class="mb-8 w-full max-w-5xl mx-auto aspect-[16/9] overflow-hidden sketch-photo">
             <NuxtImg
               :src="project.image"
               :alt="project.title"
@@ -33,7 +33,7 @@
               :href="link.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center rounded-full border-2 border-ink px-5 py-2.5 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-ink hover:text-paper"
+              class="urban-button bg-skywash/55 px-5 py-2.5 text-sm font-bold"
             >
               {{ link.label }}
             </a>
@@ -56,7 +56,7 @@
             <span
               v-for="item in project.stack"
               :key="item"
-              class="rounded-full border-2 border-ink/65 bg-paper px-4 py-1.5 text-base md:text-lg font-semibold text-ink"
+              class="border-2 border-ink/65 bg-ochre/25 px-4 py-1.5 text-base md:text-lg font-semibold text-ink"
             >
               {{ item }}
             </span>
@@ -70,7 +70,7 @@
                 :key="`${project.slug}-gallery-${index}`"
                 :src="photo"
                 :alt="`${project.title} gallery image ${index + 1}`"
-                class="h-52 w-full rounded-2xl border-2 border-ink/65 bg-paper object-contain"
+                class="h-52 w-full bg-paper object-contain sketch-photo"
               />
             </div>
           </section>
