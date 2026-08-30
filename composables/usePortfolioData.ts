@@ -156,6 +156,31 @@ export const usePortfolioData = () => {
         '/images/projects/CC-website/cc-services2.png',
         '/images/projects/CC-website/cc-contacts.png'
       ]
+    },
+    {
+      slug: 'we-connect',
+      title: 'WeConnect Event and Ticketing Platform',
+      category: 'Full Stack',
+      description: 'WeConnect is a full-stack event and ticketing management platform designed to simplify event organization, ticket management, attendee registration, and payment processing. The platform supports multiple user roles and provides an integrated workflow for managing events and ticket transactions.',
+      highlights: [
+        'Developed and enhanced features for the event and ticketing management system.',
+        'Implemented and maintained Stripe payment integration for secure ticket transactions.',
+        'Developed and improved functionality for multiple user roles and permissions.',
+        'Integrated Brevo transactional email for automated system notifications and email communication.',
+        'Investigated and fixed bugs affecting ticket payment and transaction status.',
+        'Resolved issues and implemented fixes in the production environment.',
+        'Worked on backend functionality using Laravel and frontend features using Vue.js and Inertia.js.',
+        'Assisted with database-related tasks, system improvements, and overall application maintenance.'
+      ],
+      stack: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'Stripe', 'Brevo', 'JavaScript', 'HTML', 'CSS'],
+      image: '/images/projects/we-connect-spirit/cover.png',
+      imageFit: 'cover',
+      gallery: [
+        '/images/projects/we-connect-spirit/cover.png',
+        '/images/projects/we-connect-spirit/event-list.png',
+        '/images/projects/we-connect-spirit/bookings.png',
+        '/images/projects/we-connect-spirit/bookings2.png'
+      ]
     }
   ]
 
