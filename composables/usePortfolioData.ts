@@ -237,7 +237,7 @@ export const usePortfolioData = () => {
     {
       role: 'Social Media Manager',
       company: 'Link: heightmax.ai',
-      period: 'May 2025 - Jul 2025',
+      period: 'May 2025 - July 2025',
       highlights: [
         'Managed Instagram and TikTok accounts, using AI to generate images and content related to height videos and to market their website, HeightMax AI.',
         'Posted regularly to increase viewers and user engagement.'
