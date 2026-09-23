@@ -9,14 +9,19 @@
           class="w-full md:w-[47%] lg:w-[47%]"
           :class="placementClasses[index % placementClasses.length]"
         >
-          <NuxtLink :to="`/projects/${project.slug}`" class="block focus:outline-none">
-            <div class="overflow-hidden rounded-2xl border-2 border-ink/65">
+          <NuxtLink :to="`/projects/${project.slug}`" class="group block focus:outline-none">
+            <div class="relative overflow-hidden rounded-2xl border-2 border-ink/65">
               <NuxtImg
                 :src="project.image"
                 :alt="project.title"
-                class="h-44 md:h-52 lg:h-60 w-full bg-paper transition duration-500 hover:scale-105"
+                class="h-44 md:h-52 lg:h-60 w-full bg-paper transition duration-500 group-hover:scale-105 group-focus-visible:scale-105"
                 :class="project.imageFit === 'cover' ? 'object-cover' : 'object-contain'"
               />
+              <div class="absolute inset-0 flex items-end bg-ink/70 p-5 opacity-0 transition duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                <h3 class="font-display text-2xl text-paper md:text-3xl">
+                  {{ project.title }}
+                </h3>
+              </div>
             </div>
           </NuxtLink>
         </AnimatedCard>
